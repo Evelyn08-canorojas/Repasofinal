@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Repaso Final</title>
+</head>
+<body onkeypress="teclado()">
+	<style>
+		.cgrande{
+			position: absolute;
+			top: 50px;
+			left: 230px;
+			width: 900px;
+			height: 550px;
+			background-color: lightpink;
+		}
+		.cua{
+			position: absolute;
+			top: 60px;
+			left: 450px;
+			background-color: salmon;
+			width: 400px;
+			height: 80px;
+		}
+		.cua1{
+			position: absolute;
+			top: 180px;
+			left: 420px;
+			height: 300px;
+			width: 230px;
+			background-color: aqua;
+		}
+		.cua2{
+			position: absolute;
+			top: 180px;
+			left: 670px;
+			height: 300px;
+			width: 230px;
+			background-color: yellow;
+		}
+		.bot1{
+			position: absolute;
+			top: 500px;
+			height: 70px;
+			width: 70px;
+			left: 500px;
+			border-radius: 50px;
+			border-color: violet;
+			border-width: 3px;
+			border-style: solid;
+			background-color: white;
+		}
+		.bot2{
+			position: absolute;
+			top: 500px;
+			height: 70px;
+			width: 70px;
+			left: 750px;
+			border-radius: 50px;
+			border-color: violet;
+			border-width: 3px;
+			border-style: solid;
+			background-color: white;
+		}
+		.inter1{
+			position: absolute;
+			top: 50px;
+			left: 230px;
+			width: 0px;
+			height: 550px;
+			background-color: green;
+			transition: 1s all;
+			transition: all 0.5s 0.5s;
+			z-index: 2;
+		}
+		.inter2{
+			position: absolute;
+			top: 50px;
+			left: 230px;
+			width: 900px;
+			height: 0px;
+			background-color: orange;
+			transition: 1s all;
+			transition: all 0.5s 0.5s;
+			z-index: 2;
+		}
+		.cd1{
+			position: absolute;
+			top: 100px;
+			left: 300px;
+			width: 0px;
+			height: 200px;
+			background-color: pink;
+			transition: all 0.5s 0.5s;
+			z-index: 3;
+		}
+		.cd2{
+			position: absolute;
+			top: 100px;
+			left: 550px;
+			width: 200px;
+			height: 0px;
+			background-color: pink;
+			transition: all 0.5s 0.5s;
+			z-index: 3;
+		}
+		.texto1{
+			color: transparent;
+		}
+		.texto2{
+			color: transparent;
+		}
+		.cer1{
+			position: absolute;
+			top: 500px;
+			left: 820px;
+			background-color: blue;
+			width: 0px;
+			height: 70px;
+			z-index: 3;
+			transition: all 0.5s 0.5s;
+
+		}
+		.cer2{
+			position: absolute;
+			top: 500px;
+			left: 820px;
+			background-color: blue;
+			height: 0px;
+			width: 70px;
+			z-index: 3;
+			transition: all 0.5s 0.5s;
+		}
+		.k1{
+			z-index: 2;
+			position: absolute;
+			top: 500px;
+			left: 820px;
+			background-color: brown;
+			width: 0px;
+			height: 70px;
+			transition: all 0.5s 0.5s;
+
+		}
+	</style>
+<div class="cgrande" id="cgran"></div>
+<div class="bot2" id="b2" onclick="mas2()">2</div>
+<div class="inter2" id="in2"></div>
+<div class="cua" id="c">Repaso</div>
+<div class="cua1" id="c1">intro</div>
+<div class="cua2" id="c2">foto</div>
+<div class="bot1" id="b1" onclick="mas1()">1</div>
+<div class="inter1" id="in1"></div>
+<div class="cd1" id="cdd1">
+	<p class="texto1" id="tex1">Que es</p>
+</div>
+<div class="cd2" id="cdd2">
+	<p class="texto2" id="tex2">Datos</p>
+</div>
+<div class="cer1" id="cece1" onclick="cerrar1()"></div>
+<div class="cer2" id="cece2" onclick="cerrar2()"></div>
+<div class="k1" id="kk1"></div>
+
+
+<script>
+	function mas1(){
+		in1.style.width=900+"px";
+		cdd1.style.width=200+"px";
+		tex1.style.color="black";
+		tex1.style.transition="all 1s 0.5s";
+		cece1.style.width=70+"px";
+	}
+	function mas2(){
+		in2.style.height=550+"px";
+		cdd2.style.height=200+"px";
+		tex2.style.color="black";
+		tex2.style.transition="all 1s 0.5s";
+		cece2.style.height=70+"px";
+	}
+	function cerrar1()
+	{
+		in1.style.width=0+"px";
+		cdd1.style.width=0+"px";
+		tex1.style.color="transparent";
+		cece1.style.width=0+"px";
+	}
+	function cerrar2()
+	{
+		in2.style.height=0+"px";
+		cdd2.style.height=0+"px";
+		tex2.style.color="transparent";
+		cece2.style.height=0+"px";
+	}
+	function teclado()
+	{
+		console.log(event.type);
+		console.log(event.code);
+		if(event.code=="KeyA")
+		{
+		in1.style.width=900+"px";
+		cdd1.style.width=400+"px";
+		tex1.style.color="pink";
+		tex1.style.transition="all 1s 0.5s";
+		cece1.style.width=70+"px";
+		in1.style.backgroundColor="red";		
+		}
+		if(event.code=="KeyB")
+		{
+		in2.style.height=550+"px";
+		cdd2.style.height=400+"px";
+		tex2.style.color="pink";
+		tex2.style.transition="all 1s 0.5s";
+		cece2.style.height=70+"px";
+		in2.style.backgroundColor="blue";		
+		}
+	}
+</script>
+</body>
+</html>
